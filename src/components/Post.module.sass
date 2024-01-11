@@ -1,0 +1,159 @@
+.post
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    background-color: black
+    padding: 1rem 0 3rem 0
+    color: white
+    border-bottom: .1rem solid gray
+    h1
+        background: linear-gradient(to bottom, #462523 0, #d08c33 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    h1
+        font-size: 4rem
+        border-top: .1rem solid gray
+        border-bottom:  .1rem solid gray
+        width: 95vw
+        padding: 2rem
+    img
+        width: 30rem
+    button
+        background: linear-gradient(128deg, #fa6400 60%, rgba(230,210,67,1) 100%)
+        color: white
+        border: none
+        padding: 1.4rem
+        margin: 3rem 0 3rem 0
+        font-size: 2rem
+        border-radius: 3rem
+        cursor: pointer
+        &:hover
+            padding: 1.8rem
+            margin: 2.8rem 0 2.25rem 0
+            filter: brightness(85%)
+            font-size: 2.1rem
+            transition: .1s
+        &:not(hover)
+            padding: 1.4rem
+            transition: .1s
+        &:active
+            transform: translateY(.3rem)
+            transition: .1s
+    &__upSection
+        display: flex
+        flex-direction: row-reverse
+        justify-content: space-between
+    &__info
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        padding: 2rem
+    &__descr
+        p
+            font-size: 1.7rem
+            padding: 2rem
+            min-width: 70vw
+    &__descrText
+        text-align: start
+    &__descrGrid
+        display: grid
+        grid-template-columns: 30rem 1fr
+        row-gap: .3rem
+        padding: 3rem 2rem 0rem 2rem
+        justify-items: start
+    &__ratingAndVotes
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        row-gap: .2rem
+        padding: 2rem
+    &__gridFlex
+        display: flex
+        justify-content: start
+    &__top
+        width: 1fr
+        font-size: 3rem
+        display: flex
+        justify-content: center
+        align-items: center
+        h3
+            background: linear-gradient(to bottom, #462523 0, #d08c33 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+    
+.comments
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-color: black
+    border-bottom: .1rem solid gray
+    h2
+        padding: 2rem
+        color: white
+    &__comment
+        display: flex
+        flex-direction: column
+        background: linear-gradient(150deg, #FC466B 0%, #3F5EFB 100%)
+        margin-bottom: 4rem
+        width: 70vw
+        color: white
+        img
+            padding: .5rem
+            border: .3rem solid Crimson
+            border-radius: 2rem
+            width: 8rem
+        h2
+            font-size: 1.9rem
+            text-shadow: .1rem .1rem .1rem black
+    &__text
+        text-align: start
+        padding: 2rem
+        font-size: 1.7rem
+        text-shadow: .1rem .1rem .1rem black
+    &__name
+        display: flex
+        justify-content: space-around
+        align-items: center
+        border-bottom: .1rem solid gray
+        padding: 1rem
+        h2
+            width: 20rem
+    
+.newComments
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background-color: black
+    color: white
+    h2
+        margin-top: 2rem
+    textarea 
+        margin-top: 2rem
+        width: 50rem
+        height: 20rem
+        padding: 1rem
+        font-size: 1.6rem
+    button
+        background: linear-gradient(150deg, #FC466B 0%, #3F5EFB 100%)
+        color: white
+        border: none
+        padding: 1.4rem
+        margin: 3rem 0 3rem 0
+        font-size: 2rem
+        border-radius: 3rem
+        cursor: pointer
+        &:hover
+            padding: 1.8rem
+            margin: 2.8rem 0 2.25rem 0
+            filter: brightness(85%)
+            font-size: 2.1rem
+            transition: .1s
+        &:not(hover)
+            padding: 1.4rem
+            transition: .1s
+        &:active
+            transform: translateY(.3rem)
+            transition: .1s

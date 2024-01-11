@@ -1,0 +1,116 @@
+.videoTag
+    width: 100%
+
+
+.abTag
+    background-color: black
+    position: relative
+    &::after
+        content: ''
+        z-index: 98
+        width: 100%
+        height: 20rem
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 90%)
+        display: block
+        position: absolute
+        bottom: 0
+        left: 0
+    &::before
+        content: ''
+        z-index: 99
+        width: 100%
+        height: 20rem
+        background: linear-gradient(360deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 90%)
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        
+
+.welcomeDiv
+    background-color: black
+    h1
+        background: linear-gradient(to bottom, #462523 0, #d08c33 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        border-top: .1rem solid gray
+        padding-top: 4rem
+        font-size: 3.3rem
+    
+.videoText
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 90%)
+    padding: 1rem
+    position: absolute        
+    z-index: 98
+    bottom: 18rem
+    left: 0rem
+    h3
+        background: linear-gradient(to bottom, #462523 0, #d08c33 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        font-size: 3rem
+
+.volume
+    cursor: pointer
+    position: absolute       
+    z-index: 99
+    bottom: 15.3rem
+    right: 10rem
+    color: white
+    opacity: .5
+    svg
+        width: 4rem
+        height: 4rem
+
+
+
+.sectionDown
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 2rem
+.carousel
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    color: white
+    width: 150rem
+    height: 69rem
+    overflow: hidden
+    img
+        height: 32rem
+        width: 21rem   
+    &__oneEl
+        position: relative
+        margin: 1rem
+        cursor: pointer
+        border-bottom: .3rem solid Crimson
+        border-radius: 0 0 4rem 4rem
+        &:hover
+            border-radius: 0 
+            transition: 1s
+        &:not(hover)
+            border-radius: 0 0 4rem 4rem
+            transition: 1s
+
+            
+
+.description
+    background: linear-gradient(150deg, #FC466B 0%, #3F5EFB 100%)
+    padding: 2rem
+    border-radius: 3rem 3rem 3rem 0 
+    color: white
+    width: 100rem
+    font-size: 2rem
+    align-items: center
+    p
+        padding: .2rem
+    a
+        text-decoration: none
+        color: BlueViolet
+        text-shadow: .1rem 0rem .1rem black
+    &__oneText
+        border-bottom: .1rem solid gray
+        padding: .3rem

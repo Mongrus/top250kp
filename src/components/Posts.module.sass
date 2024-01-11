@@ -1,0 +1,163 @@
+.posts
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%)
+    color: white
+    h5, h6
+        text-shadow: .1rem .1rem .1rem black
+    h5
+        font-size: 1.7rem
+    h6
+        font-size: 1.4rem
+
+.carousel
+    width: 100%
+    overflow: hidden
+    &__oneEl
+        position: relative
+    &__allFilms
+        display: flex
+        flex-direction: row
+        padding-top: 2rem
+        h2
+            position: absolute
+            background-color: LimeGreen
+            color: white
+            border-radius: .7rem
+            font-size: 2rem
+            padding: .3rem
+            top: 1rem
+            right: 1rem
+        img
+            margin: .6rem
+            padding: .2rem
+            width: 20rem
+            height: 30rem
+            &:hover
+                box-shadow: .5rem .5rem 0 DarkMagenta
+                transition: 1s
+            &:not(hover)
+                box-shadow: .0rem DarkMagenta
+                transition: 1s
+
+                
+        animation: 3000s linear carousel forwards
+        &:active
+            animation-play-state: paused  
+
+.list
+    display: flex
+    justify-content: center
+    align-items: center
+    color: white
+    &__films
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        background-color: black
+        width: 95vw
+        h5
+            padding-bottom: 1rem
+            font-size: 2rem
+        input
+            width: 20rem
+            height: 2rem
+            padding: .4rem
+            font-size: 1.7rem
+            margin-bottom: .5rem
+    &__filter
+        width: 91vw
+        border-bottom: .1rem solid gray
+        padding: 2rem
+
+    &__genre
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: row
+    &__film
+        display: flex
+        justify-content: space-between
+        text-align: center
+        align-items: center
+        width: 90vw
+        border-bottom: .1rem gray solid
+        padding: 1rem
+        img
+            width: 17rem
+        h3, h2 , span
+            background: linear-gradient(to bottom, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+        h2
+            padding-bottom: 3rem
+        p
+            font-size: 1.6rem
+            padding-bottom: 1rem
+        button
+            background: linear-gradient(128deg, #fa6400 60%, rgba(230,210,67,1) 100%)
+            text-decoration: none
+            color: white
+            border: none
+            padding: 1.4rem
+            font-size: 2rem
+            border-radius: 3rem
+            padding: 1rem
+            margin-top: 3rem
+            &:hover
+                padding: 1.6rem
+                filter: brightness(85%)
+                margin-top: 2.45rem
+                font-size: 2.1rem
+                transition: .1s
+            &:not(hover)
+                padding: 1.4rem
+                transition: .1s
+            &:active
+                transform: translateY(.3rem)
+                transition: .1s
+    &__rating
+        h3
+            font-size: 2.6rem
+        span
+            display: block
+            font-size: 4rem
+            transform: translateY(1rem)
+
+.linkUp
+    text-decoration: none
+    color: white
+    margin: 2rem
+    background-image: linear-gradient( 180.7deg,  rgba(221,22,224,1) 11%, rgba(111,22,190,1) 88.2% )
+    color: white
+    border: none
+    width: 10rem
+    margin: 3rem 0 3rem 0
+    font-size: 2rem
+    border-radius: 3rem
+    cursor: pointer
+    box-shadow: 5px 8px 26px 0px rgba(34, 60, 80, 0.2)
+    &:hover
+        padding: 1.6rem
+        margin: 3.2rem 0 2.25rem 0
+        filter: brightness(85%)
+        font-size: 2.1rem
+        transition: .1s
+    &:not(hover)
+        padding: 1.4rem
+        transition: .1s
+    &:active
+        transform: translateY(.3rem)
+        transition: .1s
+
+
+        
+@keyframes carousel
+    0%
+        transform: translateX(0rem)
+        
+    100%
+        transform: translateX(-5251rem)

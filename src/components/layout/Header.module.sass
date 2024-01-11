@@ -1,0 +1,68 @@
+.header
+    background-color: black
+    display: flex
+
+    
+.navbar
+    width: 100%
+    ul
+        height: 8rem
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        li
+            list-style-type: none
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            text-align: center
+            cursor: pointer
+            padding: .1rem
+            z-index: 99
+            &::before
+                position: absolute
+                left: -.5rem
+                top: 0
+                display: block
+                content: ''
+                width: .1rem
+                height: 3rem
+                border-radius: 1rem
+                background-color: Crimson
+                opacity: 0
+                z-index: 30
+            &:hover
+                &::before    
+                    width: 110%
+                    border-radius: 1rem
+                    height: 3rem
+                    opacity: 1
+                    transition: .5s
+            &:not(hover)
+                 &::before    
+                    width: .1rem
+                    border-radius: 1rem
+                    height: 3rem
+                    opacity: 0
+                    transition: .5s
+            &:active
+                transform: translateY(.3rem)
+                transition: .1s
+
+
+.userinfo
+    width: 30rem
+    font-size: 1.5rem
+    color: white
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    img
+        width: 6rem
+        border: .2rem solid Crimson
+        padding: .3rem
+        border-radius: 2rem
+    p
+        width: 100%
+        font-size: 1.6rem
