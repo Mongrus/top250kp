@@ -96,7 +96,7 @@ const WelcomePage = () => {
         </div>
         <div className={styles.description}>
           <p className={styles.description__oneText}>
-            На сайте предсталенны 250 лучших кинокартин по версии КиноПоиска.
+            На сайте представленны 250 лучших кинокартин по версии КиноПоиска.
           </p>
           <p>
             Вы можете сделать <Link to="posts">фильтр по жанрам</Link> или же

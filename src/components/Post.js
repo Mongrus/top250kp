@@ -71,7 +71,6 @@ const Post = () => {
         .then((res) =>
           setComments(
             res.filter((el) => {
-              console.log(el.number_posts === numPosts);
               if (el.number_posts === numPosts) {
                 return el;
               } else {
