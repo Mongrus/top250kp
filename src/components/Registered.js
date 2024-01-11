@@ -66,7 +66,7 @@ const Registered = () => {
       setLog('');
       setMail('');
       setPass('');
-      navigate('/top250/login');
+      navigate('/login');
     } else {
       setLog('');
       setMail('');
