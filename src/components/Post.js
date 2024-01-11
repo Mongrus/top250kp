@@ -32,7 +32,7 @@ const Post = () => {
     try {
       await fetch(
         `https://rapid-complete-dress.glitch.me/posts/${loc.pathname.substr(
-          14,
+          7,
           loc.pathname.length
         )}`,
         {
@@ -91,7 +91,7 @@ const Post = () => {
     newGetComments();
   }, []);
 
-  const numPosts = Number(loc.pathname.substr(14, loc.pathname.length));
+  const numPosts = Number(loc.pathname.substr(7, loc.pathname.length));
 
   // Отправка нового комментария
 

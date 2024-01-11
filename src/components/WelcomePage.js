@@ -49,7 +49,6 @@ const WelcomePage = () => {
     }
   };
 
-  console.log(mut);
   return (
     <div className={styles.welcomeDiv}>
       <h1>⭒✮⭒ 250 лучших фильмов по версии КиноПоиска ⭒✮⭒</h1>
