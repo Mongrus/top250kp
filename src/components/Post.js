@@ -148,8 +148,6 @@ const Post = () => {
     newGetComments();
   };
 
-  // console.log(numPosts);
-
   return (
     <div>
       <ToastContainer></ToastContainer>
