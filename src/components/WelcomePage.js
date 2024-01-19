@@ -86,9 +86,9 @@ const WelcomePage = () => {
           autoPlay
           loop
           muted={mut}
-          // onLoadedData={() => {
-          //   setLoadedVideo(true);
-          // }}
+          onLoadedData={() => {
+            setLoadedVideo(true);
+          }}
           ref={videoSize}
         >
           <source
