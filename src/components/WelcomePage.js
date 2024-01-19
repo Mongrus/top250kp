@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
 import styles from './WelcomePage.module.sass';
@@ -11,6 +11,7 @@ import video6 from './video6.mp4';
 import video7 from './video7.mp4';
 import AppContext from '../context/AppContext';
 import ContentLoader from 'react-content-loader';
+import RingLoader from 'react-spinners/RingLoader';
 
 const WelcomePage = () => {
   const { arrFilms, arrCarousel, setArrFilms, setArrCarousel } =
@@ -26,6 +27,8 @@ const WelcomePage = () => {
   ]);
   const [mut, setMut] = useState('muted');
   const [loadedVideo, setLoadedVideo] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const videoSize = useRef(0);
 
   const shuffle = (arr) => {
     const newArr = Array.from(arr);
@@ -62,15 +65,15 @@ const WelcomePage = () => {
       {...props}
     >
       <rect x="20" y="5" rx="10" ry="10" width="210" height="320" />
-      <rect x="245" y="5" rx="10" ry="10" width="210" height="320" />
-      <rect x="470" y="5" rx="10" ry="10" width="210" height="320" />
+      <rect x="250" y="5" rx="10" ry="10" width="210" height="320" />
+      <rect x="480" y="5" rx="10" ry="10" width="210" height="320" />
       <rect x="20" y="340" rx="10" ry="10" width="210" height="320" />
-      <rect x="245" y="340" rx="10" ry="10" width="210" height="320" />
-      <rect x="470" y="340" rx="10" ry="10" width="210" height="320" />
+      <rect x="250" y="340" rx="10" ry="10" width="210" height="320" />
+      <rect x="480" y="340" rx="10" ry="10" width="210" height="320" />
     </ContentLoader>
   );
 
-  console.log(loadedVideo);
+  console.log(videoSize.current.clientHeight);
   return (
     <div className={styles.welcomeDiv}>
       <h1>⭒✮⭒ 250 лучших фильмов по версии КиноПоиска ⭒✮⭒</h1>
@@ -86,14 +89,31 @@ const WelcomePage = () => {
           onLoadedData={() => {
             setLoadedVideo(true);
           }}
+          ref={videoSize}
         >
           <source
             src={arrVideo[Math.floor(Math.random() * arrVideo.length)]}
             type="video/mp4"
           />
         </video>
-        {loadedVideo ? <></> : <h1>Пока загружается</h1>}
-
+        {loadedVideo ? (
+          <></>
+        ) : (
+          <div
+            className={styles.notVideo}
+            style={{
+              top: `${Number(videoSize.current.clientHeight) / 2 / 15}rem`,
+            }}
+          >
+            <RingLoader
+              color={'#3F5EFB'}
+              loading={loading}
+              size={150}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>
+        )}
         <div className={styles.videoText}>
           <h3>Ожидаем в 2024</h3>
         </div>
