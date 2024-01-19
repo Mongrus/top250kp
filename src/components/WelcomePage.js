@@ -86,9 +86,9 @@ const WelcomePage = () => {
           autoPlay
           loop
           muted={mut}
-          onLoadedData={() => {
-            setLoadedVideo(true);
-          }}
+          // onLoadedData={() => {
+          //   setLoadedVideo(true);
+          // }}
           ref={videoSize}
         >
           <source
@@ -102,13 +102,13 @@ const WelcomePage = () => {
           <div
             className={styles.notVideo}
             style={{
-              top: `${Number(videoSize.current.clientHeight) / 2 / 15}rem`,
+              bottom: `${Number(videoSize.current.clientHeight) / 2 / 10}rem`,
             }}
           >
             <RingLoader
               color={'#3F5EFB'}
               loading={loading}
-              size={150}
+              size={100}
               aria-label="Loading Spinner"
               data-testid="loader"
             />
