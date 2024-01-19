@@ -1,12 +1,12 @@
 import './App.sass';
 import AppContext from './context/AppContext';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Main from './components/layout/Main';
 import Posts from './components/Posts';
 import Registered from './components/Registered';
 import Login from './components/Login';
 import Post from './components/Post';
-import { useState, useEffect } from 'react';
 import WelcomePage from './components/WelcomePage';
 
 function App() {

@@ -10,6 +10,7 @@ import video5 from './video5.mp4';
 import video6 from './video6.mp4';
 import video7 from './video7.mp4';
 import AppContext from '../context/AppContext';
+import ContentLoader from 'react-content-loader';
 
 const WelcomePage = () => {
   const { arrFilms, arrCarousel, setArrFilms, setArrCarousel } =
@@ -24,6 +25,7 @@ const WelcomePage = () => {
     video7,
   ]);
   const [mut, setMut] = useState('muted');
+  const [loadedVideo, setLoadedVideo] = useState(false);
 
   const shuffle = (arr) => {
     const newArr = Array.from(arr);
@@ -49,6 +51,26 @@ const WelcomePage = () => {
     }
   };
 
+  const MyLoader = (props) => (
+    <ContentLoader
+      speed={2}
+      width={720}
+      height={690}
+      viewBox="0 0 720 690"
+      backgroundColor="#FC466B"
+      foregroundColor="#3F5EFB"
+      {...props}
+    >
+      <rect x="20" y="5" rx="10" ry="10" width="210" height="320" />
+      <rect x="245" y="5" rx="10" ry="10" width="210" height="320" />
+      <rect x="470" y="5" rx="10" ry="10" width="210" height="320" />
+      <rect x="20" y="340" rx="10" ry="10" width="210" height="320" />
+      <rect x="245" y="340" rx="10" ry="10" width="210" height="320" />
+      <rect x="470" y="340" rx="10" ry="10" width="210" height="320" />
+    </ContentLoader>
+  );
+
+  console.log(loadedVideo);
   return (
     <div className={styles.welcomeDiv}>
       <h1>⭒✮⭒ 250 лучших фильмов по версии КиноПоиска ⭒✮⭒</h1>
@@ -61,12 +83,17 @@ const WelcomePage = () => {
           autoPlay
           loop
           muted={mut}
+          onLoadedData={() => {
+            setLoadedVideo(true);
+          }}
         >
           <source
             src={arrVideo[Math.floor(Math.random() * arrVideo.length)]}
             type="video/mp4"
           />
         </video>
+        {loadedVideo ? <></> : <h1>Пока загружается</h1>}
+
         <div className={styles.videoText}>
           <h3>Ожидаем в 2024</h3>
         </div>
@@ -81,18 +108,20 @@ const WelcomePage = () => {
       </div>
       <div className={styles.sectionDown}>
         <div className={styles.carousel}>
-          {arrCarousel.map((film) => {
-            if (film.shortDescription) {
-              return (
-                <div key={film.id} className={styles.carousel__oneEl}>
-                  <Link className="mainLink" to={`posts/${film.id}`}>
-                    <img src={`${film.poster.previewUrl}`} alt="#" />
-                    <h5>{film.shortDescription}</h5>
-                  </Link>
-                </div>
-              );
-            }
-          })}
+          {arrCarousel.length > 0
+            ? arrCarousel.map((film) => {
+                if (film.shortDescription) {
+                  return (
+                    <div key={film.id} className={styles.carousel__oneEl}>
+                      <Link className="mainLink" to={`posts/${film.id}`}>
+                        <img src={`${film.poster.previewUrl}`} alt="#" />
+                        <h5>{film.shortDescription}</h5>
+                      </Link>
+                    </div>
+                  );
+                }
+              })
+            : MyLoader()}
         </div>
         <div className={styles.description}>
           <p className={styles.description__oneText}>
