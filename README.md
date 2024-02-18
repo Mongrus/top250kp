@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+1. **Создание контекста приложения**: Разработал `AppContext` для управления глобальным состоянием приложения, включая данные о фильмах, фильтрах и пользователе.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. **Реализация компонента фильмов**: Создал компонент `Posts`, который отображает список фильмов в карусели и списке с возможностью фильтрации по названию или жанру.
 
-## Available Scripts
+3. **Интеграция с API**: Интегрировал приложение с внешним API для получения данных о фильмах и комментариях, используя `fetch` для выполнения HTTP-запросов.
 
-In the project directory, you can run:
+4. **Обработка данных**: Реализовал функции для обработки и отображения данных о фильмах, включая перемешивание фильмов в карусели и фильтрацию списка.
 
-### `npm start`
+5. **Создание компонента детализации фильма**: Разработал компонент `Post`, который отображает детальную информацию о конкретном фильме, включая комментарии и форму для добавления новых комментариев.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6. **Аутентификация и авторизация**: Реализовал систему входа в систему с использованием `localStorage` для хранения информации о пользователе и проверки статуса авторизации.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+7. **Уведомления**: Интегрировал библиотеку `react-toastify` для отображения уведомлений о статусе операций, таких как успешный вход в систему или добавление комментария.
 
-### `npm test`
+8. **Стилизация**: Применил модульные стили SCSS для создания адаптивного и уникального дизайна компонентов.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+9. **Обработка ошибок**: Добавил обработку ошибок при выполнении запросов к API и отображал их в консоли для улучшения отладки.
 
-### `npm run build`
+10. **Производительность**: Использовал хуки `useEffect` для оптимизации загрузки данных при монтировании компонентов, что улучшает производительность приложения.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+11. **Доступность**: Улучшил доступность приложения, используя уникальные идентификаторы для элементов списка и формы.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+12. **SEO**: Улучшил SEO приложения, используя компонент `Link` для навигации и предоставляя ссылки на внешние ресурсы.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+13. **Адаптивность**: Обеспечил адаптивность приложения, используя модульные стили SCSS для корректного отображения на различных устройствах.
 
-### `npm run eject`
+14. **Техническая документация**: Добавил комментарии и структуру в код для упрощения понимания и поддержки кода другими разработчиками.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+15. **Прогрессивное улучшение**: Реализовал загрузчики контента с использованием библиотеки `react-content-loader` для улучшения пользовательского опыта при загрузке данных.
